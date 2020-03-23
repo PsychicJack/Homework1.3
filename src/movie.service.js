@@ -1,9 +1,9 @@
 import { Movie } from "./movie.js";
 import { Actor } from "./actor.js";
 
-const URL_MOVIES = "http://localhost:3000/movies";
-const URL_ACTORS = "http://localhost:3000/actors";
-const URL_ACTEDIN = "http://localhost:3000/actedIn";
+const URL_MOVIES = "https://my-json-server.typicode.com/PsychicJack/Homework1.3/movies";
+const URL_ACTORS = "https://my-json-server.typicode.com/PsychicJack/Homework1.3/actors";
+const URL_ACTEDIN = "https://my-json-server.typicode.com/PsychicJack/Homework1.3/actedIn";
 
 export function getMovieNames() {
     return new Promise((resolve, reject) => {
