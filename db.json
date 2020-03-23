@@ -1,0 +1,118 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "name": "The Irishman",
+            "genre": ["Biography", "Crime", "Drama"],
+            "year": 2019
+        },
+        {
+            "id": 2,
+            "name": "Black Panther",
+            "genre": ["Action", "Adventure", "Sci-Fi"],
+            "year": 2018
+        },
+        {
+            "id": 3,
+            "name": "Inception",
+            "genre": ["Action", "Adventure", "Sci-Fi"],
+            "year": 2010
+        }
+    ],
+
+    "actors": [
+        {
+            "id": 1,
+            "name": "Robert De Niro"
+        },
+        {
+            "id": 2,
+            "name": "Al Pacino"
+        },
+        {
+            "id": 3,
+            "name": "Joe Pesci"
+        },
+        {
+            "id": 4,
+            "name": "Chadwick Boseman"
+        },
+        {
+            "id": 5,
+            "name": "Michael B. Jordan"
+        },
+        {
+            "id": 6,
+            "name": "Lupita Nyong'o"
+        },
+        {
+            "id": 7,
+            "name": "Leonardo DiCaprio"
+        },
+        {
+            "id": 8,
+            "name": "Joseph Gordon-Levitt"
+        },
+        {
+            "id": 9,
+            "name": "Ellen Page"
+        }
+    ],
+
+    "actedIn": [
+        {
+            "id": 1,
+            "movieId": 1,
+            "actorId": 1,
+            "characterName": "Frank Sheeran"
+        },
+        {
+            "id": 2,
+            "movieId": 1,
+            "actorId": 2,
+            "characterName": "Jimmy Hoffa"
+        },
+        {
+            "id": 3,
+            "movieId": 1,
+            "actorId": 3,
+            "characterName": "Russell Bufalino"
+        },
+        {
+            "id": 4,
+            "movieId": 2,
+            "actorId": 4,
+            "characterName": "T'Challa / Black Panther"
+        },
+        {
+            "id": 5,
+            "movieId": 2,
+            "actorId": 5,
+            "characterName": "Erik Killmonger"
+        },
+        {
+            "id": 6,
+            "movieId": 2,
+            "actorId": 6,
+            "characterName": "Nakia"
+        },
+        {
+            "id": 7,
+            "movieId": 3,
+            "actorId": 7,
+            "characterName": "Cobb"
+        },
+        {
+            "id": 8,
+            "movieId": 3,
+            "actorId": 8,
+            "characterName": "Arthur"
+        },
+        {
+            "id": 9,
+            "movieId": 3,
+            "actorId": 9,
+            "characterName": "Ariadne"
+        }
+    ]
+}
