@@ -1,5 +1,5 @@
-import { getMovieNames, getMovie, getActors } from "./src/movie.service";
-import { drawInit } from "./src/draw-functions";
+import { getMovieNames, getMovie, getActors } from "./movie.service";
+import { drawInit } from "./draw-functions";
 
 console.log("hello again");
 
