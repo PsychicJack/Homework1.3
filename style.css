@@ -1,6 +1,36 @@
-
-
-
+*
+{
+    margin: 0;
+    padding: 0;
+}
 .hidden-div{
     display: none;
+}
+
+.main{
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+.movie-content
+{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.expand-details
+{
+    flex-grow: 1;
+    max-width: 100px;
+    min-width: 50px;
 }

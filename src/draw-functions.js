@@ -1,9 +1,11 @@
 import { getMovie, getActors } from "./movie.service";
 
 export function drawInit(host, data) {
+    const mainDiv = host.appendChild(document.createElement("div"));
+    mainDiv.classList.add("main");
     data.forEach(el => {
-        const div = host.appendChild(document.createElement("div"));
-        div.classList.add("movie-name");
+        const div = mainDiv.appendChild(document.createElement("div"));
+        div.classList.add("movie");
         div.appendChild(document.createTextNode(el.name));
         const hidden = div.appendChild(document.createElement("input"));
         hidden.type = "hidden";
@@ -11,7 +13,7 @@ export function drawInit(host, data) {
         const button = div.appendChild(document.createElement("button"));
         button.classList.add("expand-details");
         const content = div.appendChild(document.createElement("div"));
-        content.classList.add("content");
+        content.classList.add("movie-content");
         button.onclick = async function() {
             if (button.innerHTML == "▼") {
                 content.classList.remove("hidden-div");
@@ -34,11 +36,11 @@ export function drawInit(host, data) {
                     );
                 });*/
                 drawMovieDetails(
-                    button.parentNode.querySelector(".content"),
+                    button.parentNode.querySelector(".movie-content"),
                     movie
                 );
                 drawMovieActors(
-                    button.parentNode.querySelector(".content"),
+                    button.parentNode.querySelector(".movie-content"),
                     actors
                 );
             } else {
