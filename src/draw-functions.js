@@ -6,14 +6,21 @@ export function drawInit(host, data) {
     data.forEach(el => {
         const div = mainDiv.appendChild(document.createElement("div"));
         div.classList.add("movie");
-        div.appendChild(document.createTextNode(el.name));
+
+        const p = div.appendChild(document.createElement("div"));
+        p.innerHTML = el.name;
+        p.classList = "movie-name";
+
         const hidden = div.appendChild(document.createElement("input"));
         hidden.type = "hidden";
         hidden.value = el.id;
+
         const button = div.appendChild(document.createElement("button"));
         button.classList.add("expand-details");
+
         const content = div.appendChild(document.createElement("div"));
         content.classList.add("movie-content");
+
         button.onclick = async function() {
             if (button.innerHTML == "▼") {
                 content.classList.remove("hidden-div");
@@ -40,7 +47,7 @@ export function drawInit(host, data) {
                     movie
                 );
                 drawMovieActors(
-                    button.parentNode.querySelector(".movie-content"),
+                    button.parentNode.querySelector(".movie-details"),
                     actors
                 );
             } else {
@@ -56,16 +63,23 @@ export function drawInit(host, data) {
 function drawMovieDetails(host, movieDetails) {
     const div = host.appendChild(document.createElement("div"));
     div.classList.add("movie-details");
-    div.appendChild(document.createElement("div")).appendChild(
-        document.createTextNode(movieDetails.genre.join(", "))
-    );
-    div.appendChild(document.createElement("div")).appendChild(
-        document.createTextNode(`year: ${movieDetails.year}`)
-    );
+
+    let p = div
+        .appendChild(document.createElement("div"))
+        .appendChild(document.createElement("p"));
+    p.innerHTML = `<b>Genre:</b> ${movieDetails.genre.join(", ")}`;
+    p.classList.add("genre");
+
+    p = div.appendChild(document.createElement("div")).appendChild(document.createElement("p"));
+    p.innerHTML = `<b>Year:</b> ${movieDetails.year}`;
+    p.classList.add("year");
 }
 
 function drawMovieActors(host, actors) {
     const div = host.appendChild(document.createElement("div"));
     div.classList.add("movie-actors");
-    div.appendChild(document.createTextNode(`Actors: ${actors.join(", ")}`));
+
+    const p = div.appendChild(document.createElement("p"));
+    p.innerHTML = `<b>Actors:</b> ${actors.join(", ")}`;
+    p.classList.add("actors");
 }
